@@ -24,6 +24,14 @@ I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, a
 - **[SpringBootFinalProject](https://github.com/Yeagerist0/SpringBootFinalProject)** and **[rideshare](https://github.com/Yeagerist0/rideshare)** — Spring Boot backends with JWT auth, role-based access and Docker Compose.
 - Java low-level design: [movieticketlld](https://github.com/Yeagerist0/movieticketlld) (concurrency-safe seat locking, with the race-condition tests), [elevatorlld](https://github.com/Yeagerist0/elevatorlld), [parkinglotlld](https://github.com/Yeagerist0/parkinglotlld).
 
+### OWASP
+
+Open at the moment, none of it merged yet — links so you can check the state yourself.
+
+- **[coreruleset #4773](https://github.com/coreruleset/coreruleset/issues/4773)** — a Velocity SSTI chain that spawns a process and gets no rule match at paranoia level 1. Three PL1 rules fall in sequence to splitting one string literal each: the class-name list to `'java.lang.Runt'+'ime'`, the `runtime|processbuilder` regex to `'getRunt'+'ime'`, and the PHP function regex to `'ex'+'ec'`. Reported with the payload running under Apache Velocity 2.3, a control showing the un-split version is blocked, and a note that PL2 upward catches it.
+- **[CheatSheetSeries #2393](https://github.com/OWASP/CheatSheetSeries/issues/2393)** — the LLM Prompt Injection cheat sheet grades defenses with a block rate over 14 payloads and calls it a "Security score", with no benign corpus and a pass condition that substring-matches refusal wording. Proposed replacing it with something that has controls and reports an interval.
+- Two guard bypasses in **Agent Memory Guard** (an OWASP Incubator project), reported privately with patches and regression tests, held until the maintainer replies.
+
 ### Bug bounty
 
 HackerOne and Intigriti. The findings that get paid are almost always the same shape: an unauthenticated path into a function that assumed nobody could reach it from outside.
