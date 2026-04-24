@@ -24,7 +24,7 @@ I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, a
 - **[SpringBootFinalProject](https://github.com/Yeagerist0/SpringBootFinalProject)** and **[rideshare](https://github.com/Yeagerist0/rideshare)** — Spring Boot backends with JWT auth, role-based access and Docker Compose.
 - Java low-level design: [movieticketlld](https://github.com/Yeagerist0/movieticketlld) (concurrency-safe seat locking, with the race-condition tests), [elevatorlld](https://github.com/Yeagerist0/elevatorlld), [parkinglotlld](https://github.com/Yeagerist0/parkinglotlld).
 
-### OWASP
+### Open source
 
 Two merged into flagship projects, the rest open — links so you can check the state yourself.
 
@@ -32,6 +32,8 @@ Two merged into flagship projects, the rest open — links so you can check the 
 - **[wstg #1506](https://github.com/OWASP/wstg/pull/1506)** — *merged.* The Web Security Testing Guide's SSTI section probes only interpolation syntax (`{{ }}`, `${ }`, `<% %>`), so a tester following it misses Velocity and FreeMarker, which evaluate directive syntax. Adds probes for both, verified to render `49` under Velocity 2.3 and FreeMarker 2.3.32, and warns that a bare directive returns no output — an unchanged response is not evidence the payload did not run. Also replaces Tplmap, whose last commit was 2021, with the maintained fork.
 - **[CheatSheetSeries #2393](https://github.com/OWASP/CheatSheetSeries/issues/2393)** — the LLM Prompt Injection cheat sheet grades defenses with a block rate over 14 payloads and calls it a "Security score", with no benign corpus and a pass condition that substring-matches refusal wording. Proposed replacing it with something that has controls and reports an interval.
 - Two guard bypasses in **Agent Memory Guard** (an OWASP Incubator project), reported privately with patches and regression tests, held until the maintainer replies.
+- **[garak #2144](https://github.com/NVIDIA/garak/pull/2144) & [#2146](https://github.com/NVIDIA/garak/pull/2146)** — *open, pending maintainer review.* NVIDIA's LLM red-teaming framework, 9k★. `StringDetector`'s word-boundary regex (`\b`) can't match a term that itself starts or ends with a non-word character, so 14 shipped profanity-list entries — the leetspeak/symbol obfuscations the list exists to catch — silently scored clean; fixed with lookaround boundaries (#2144). Chasing that further found `SurgeProfanityRacialEthnic` requesting a CSV category key that doesn't exist, so a `defaultdict` silently handed it zero terms: garak's racial/ethnic slur detector had been matching nothing at all (#2146). Both ship a regression test proven to fail on the unpatched code; full detector suite green, 780 passed.
+- A security-boundary gap in **OWASP ZAP**'s `llm` add-on, reported privately per their disclosure policy with a proof-of-concept and a proposed fix; awaiting response.
 
 ### Bug bounty
 
