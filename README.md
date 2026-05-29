@@ -1,16 +1,13 @@
-## Hi there 👋
+### Hitarth Jain
 
-<!--
-**Yeagerist0/Yeagerist0** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Computer Science student focused on security engineering — building tools that detect, correlate, and fix real vulnerabilities instead of just reporting them. Active in bug bounty hunting.
 
-Here are some ideas to get you started:
+**Currently building**
+**SentinelX** — self-hosted EDR + lightweight SIEM that correlates endpoint telemetry into investigations via a per-host provenance graph (Go, eBPF)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**TheKnight** — AWS misconfiguration scanner that opens the fix as a pull request instead of just a dashboard (Go)
+
+**prompt-injection-soc-telemetry** — research measuring how well LLM-narrated security telemetry resists indirect prompt injection
+
+**Connect**
+LinkedIn: [linkedin.com/in/hitarth-jain-7b7a64332](https://www.linkedin.com/in/hitarth-jain-7b7a64332)
