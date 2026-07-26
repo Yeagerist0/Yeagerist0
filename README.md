@@ -1,6 +1,10 @@
 ## Hitarth Jain
 
-CS undergrad at Scaler School of Technology, graduating 2027. I build security tooling and hunt bug bounties. Most of what's here exists because I wanted to know whether something actually worked, not because someone assigned it.
+The two results I'd show you first are the ones that killed my own hypothesis.
+
+My prompt-injection work looked like a clean win — 6.1% bypass for one defense tier, 7.6% for the other — until I computed the interval and found the two don't separate at all. My GPT-2 probe looked like it decoded instruction provenance until I found the length confound I'd built into my own design; that one ended in a null. Both are published here with the numbers that make them look worse.
+
+I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, and report what the measurement actually says. CS undergrad at Scaler School of Technology in Bengaluru, graduating 2027.
 
 ### Start here
 
@@ -8,9 +12,9 @@ CS undergrad at Scaler School of Technology, graduating 2027. I build security t
 
 **[theknight](https://github.com/Yeagerist0/theknight)** — AWS misconfiguration scanner that opens the fix as a pull request. Every scanner will tell you the bucket is public. This one sends the Terraform diff that closes it.
 
-**[prompt-injection-soc-telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — can an LLM writing up your security alerts be talked into lying by text sitting inside those alerts? 66 payloads, three narrator defense tiers. Both defended tiers beat the undefended one: 22.7% bypass drops to 6.1% and 7.6%. The two defenses do not separate from each other — the paired difference is −1.5% [−9.1, 6.1], so ranking them on those numbers is reading noise, and I don't. Where they do separate is severity: the structurally grounded tier never downgraded a severity in its own voice, 0 out of 31, and that held up on a second model when the prompt-hardened tier's advantage didn't. Partway through I found a confound in my own judge and had to rerun everything.
+**[prompt-injection-soc-telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — the corpus and harness behind the result above. 66 payloads, three narrator defense tiers, an LLM judge I had to rebuild mid-run after finding a confound in it. Where the tiers do separate is severity: the structurally grounded one never downgraded a severity in its own voice, 0 out of 31, and that held on a second model when the prompt-hardened tier's advantage didn't.
 
-**[instruction-provenance-probe](https://github.com/Yeagerist0/instruction-provenance-probe)** — the same question one level down: is "this instruction came from the operator" versus "this one came from retrieved data" linearly decodable from GPT-2's residual stream? Linear probes and activation steering in PyTorch. I caught a length confound in my own design, fixed it, and got a clean null. Writing up a null is less fun than the alternative.
+**[instruction-provenance-probe](https://github.com/Yeagerist0/instruction-provenance-probe)** — the mechanistic version of the same question. Is "this instruction came from the operator" versus "this one came from retrieved data" linearly decodable from GPT-2's residual stream? Linear probes and activation steering in PyTorch, and a null result I wrote up anyway.
 
 ### Also here
 
