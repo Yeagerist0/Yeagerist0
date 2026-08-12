@@ -10,4 +10,4 @@ Computer Science student focused on security engineering — building tools that
 **prompt-injection-soc-telemetry** — research measuring how well LLM-narrated security telemetry resists indirect prompt injection
 
 **Connect**
-LinkedIn: [linkedin.com/in/hitarth-jain-7b7a64332](https://www.linkedin.com/in/hitarth-jain-7b7a64332)
+LinkedIn: [linkedin.com/in/hitarth-jain-7b7a64332](https://www.linkedin.com/in/hitarthjain-security)
