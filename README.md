@@ -28,8 +28,11 @@ I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, a
 
 ### Kaggle
 
-Notebooks where I measure instead of guess: repeated cross-validation, error bars, and the ideas that did nothing stay in. ([Profile](https://www.kaggle.com/hitarthjain0))
+**Notebooks Expert**, rank 1,277 of 60,004 in Code. Notebooks where I measure instead of guess: repeated cross-validation, error bars, and the ideas that did nothing stay in. ([Profile](https://www.kaggle.com/hitarthjain0))
 
+- **[RSNA Knee: CoAtNet + ConvNeXt MIL, LB 0.950](https://www.kaggle.com/code/hitarthjain0/rsna-knee-coatnet-convnext-mil-lb-0-950)** — my most-voted notebook (54). A forkable knee-MRI pipeline that scores 0.950 AUC. Blending in my own 2.5D models pulled it down to 0.948, so they stay out.
+- **[RSNA Knee: which report labels to train on](https://www.kaggle.com/code/hitarthjain0/rsna-which-report-labels-to-train-on)** — scores five LLM-made label sets against the 58 hand-labelled studies. Soft labels beat hard 0/1 ones, 0.895 to 0.835 AUC.
+- **[RSNA Knee: rebuild barun's volumes from DICOM](https://www.kaggle.com/code/hitarthjain0/rsna-rebuild-barun-volumes-from-dicom)** — reproduces a popular preprocessed dataset from raw DICOM so models trained on it can be submitted offline; 32 of 40 series come out byte-identical.
 - **[How much does the public leaderboard lie?](https://www.kaggle.com/code/hitarthjain0/how-much-does-the-public-leaderboard-lie)** — public vs private ranks for 512 competitions from Meta Kaggle. Only about half of the public top 1% is still top 1% at the end; in 1,000+ team competitions a public top-1% rank ends with a medal about 79% of the time, 5-7.5% about 56%, 10-12.5% about 23%. Runs in 28 s on a [17 MB rank extract](https://www.kaggle.com/datasets/hitarthjain0/kaggle-public-vs-private-ranks).
 - **[Gemma 4 agent: run the real evaluator locally](https://www.kaggle.com/code/hitarthjain0/gemma-4-agent-run-the-real-evaluator-locally)** — runs the competition's own evaluator on a GPU notebook and counts tool-call loops from the traces (3 of 10 tasks looped; 1 of 10 resolved in this run).
 - **[Titanic: what beats the noise](https://www.kaggle.com/code/hitarthjain0/titanic-feature-engineering-what-beats-the-noise)** — 20 repeated CVs per feature idea. Only the title and an age fill by title beat the noise (+0.5 and +0.4 points); the public leaderboard's own error is about ±2 points.
