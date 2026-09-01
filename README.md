@@ -8,7 +8,7 @@ CS undergrad at Scaler School of Technology, graduating 2027. I build security t
 
 **[theknight](https://github.com/Yeagerist0/theknight)** — AWS misconfiguration scanner that opens the fix as a pull request. Every scanner will tell you the bucket is public. This one sends the Terraform diff that closes it.
 
-**[prompt-injection-soc-telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — can an LLM writing up your security alerts be talked into lying by text sitting inside those alerts? 66 payloads across three narrator defense tiers: naive got bypassed 23% of the time, prompt-hardened 6%, structurally grounded 8%. The bypass rate turned out to be the boring number. The structural tier never downgraded a severity in its own voice (0/31), and on a second model that advantage replicated while the prompt-hardened tier's didn't. Partway through I found a confound in my own judge and had to rerun the whole thing.
+**[prompt-injection-soc-telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — can an LLM writing up your security alerts be talked into lying by text sitting inside those alerts? 66 payloads, three narrator defense tiers. Both defended tiers beat the undefended one: 22.7% bypass drops to 6.1% and 7.6%. The two defenses do not separate from each other — the paired difference is −1.5% [−9.1, 6.1], so ranking them on those numbers is reading noise, and I don't. Where they do separate is severity: the structurally grounded tier never downgraded a severity in its own voice, 0 out of 31, and that held up on a second model when the prompt-hardened tier's advantage didn't. Partway through I found a confound in my own judge and had to rerun everything.
 
 **[instruction-provenance-probe](https://github.com/Yeagerist0/instruction-provenance-probe)** — the same question one level down: is "this instruction came from the operator" versus "this one came from retrieved data" linearly decodable from GPT-2's residual stream? Linear probes and activation steering in PyTorch. I caught a length confound in my own design, fixed it, and got a clean null. Writing up a null is less fun than the alternative.
 
@@ -26,4 +26,4 @@ HackerOne and Intigriti. The findings that get paid are almost always the same s
 
 ### Contact
 
-[LinkedIn](https://www.linkedin.com/in/hitarthjain-security)
+[Site](https://yeagerist0.github.io) · [LinkedIn](https://www.linkedin.com/in/hitarthjain-security) · jainhitarth963@gmail.com
