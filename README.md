@@ -4,7 +4,7 @@ The two results I'd show you first are the ones that killed my own hypothesis.
 
 My prompt-injection work looked like a clean win — 6.1% bypass for one defense tier, 7.6% for the other — until I computed the interval and found the two don't separate at all. My GPT-2 probe looked like it decoded instruction provenance until I found the length confound I'd built into my own design; that one ended in a null. Both are published here with the numbers that make them look worse.
 
-I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, and report what the measurement actually says. CS undergrad at Scaler School of Technology in Bengaluru, graduating 2027.
+I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, and report what the measurement actually says. CS undergrad at Scaler School of Technology in Bengaluru, degree from BITS Pilani, graduating 2027.
 
 ### Start here
 
