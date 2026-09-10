@@ -26,6 +26,16 @@ I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, a
 - **[SpringBootFinalProject](https://github.com/Yeagerist0/SpringBootFinalProject)** and **[rideshare](https://github.com/Yeagerist0/rideshare)** — Spring Boot backends with JWT auth, role-based access and Docker Compose.
 - Java low-level design: [movieticketlld](https://github.com/Yeagerist0/movieticketlld) (concurrency-safe seat locking, with the race-condition tests), [elevatorlld](https://github.com/Yeagerist0/elevatorlld), [parkinglotlld](https://github.com/Yeagerist0/parkinglotlld).
 
+### Kaggle
+
+Notebooks where I measure instead of guess: repeated cross-validation, error bars, and the ideas that did nothing stay in. ([Profile](https://www.kaggle.com/hitarthjain0))
+
+- **[Titanic: what beats the noise](https://www.kaggle.com/code/hitarthjain0/titanic-feature-engineering-what-beats-the-noise)** — 20 repeated CVs per feature idea. Only the title and an age fill by title beat the noise (+0.5 and +0.4 points); the public leaderboard's own error is about ±2 points.
+- **[Spaceship Titanic: feature ablation](https://www.kaggle.com/code/hitarthjain0/spaceship-titanic-feature-engineering-ablation)** — group-aware CV. Parsing the cabin is worth about 1.4 points; almost everything else is noise.
+- **[Store Sales: how wrong is random CV](https://www.kaggle.com/code/hitarthjain0/store-sales-how-wrong-is-random-cv)** — the same LightGBM with calendar features scores 0.42 RMSLE under random folds and about 0.55 on a real 16-day forecast.
+- **[RSNA Knee: 58 labels, 4,407 reports](https://www.kaggle.com/code/hitarthjain0/rsna-knee-58-labels-4407-reports)** — only 1.3% of training studies have gold labels. Keyword rules agree with them about 72% of the time, and a text model is close to chance.
+- **[Gemma 4 developer agent: field guide](https://www.kaggle.com/code/hitarthjain0/gemma-4-dev-agent-what-moves-the-leaderboard)** — how the two-phase evaluation, budgets and bundle validation work, with a runnable bundle builder.
+
 ### Open source
 
 Three merged, the rest open — links so you can check the state yourself.
