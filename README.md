@@ -1,5 +1,13 @@
 ## Hitarth Jain
 
+**AI evaluation & security researcher · benchmark designer · open-source security contributor**
+
+I build reproducible evaluations for AI systems and investigate where models mistake untrusted data for instructions. My work combines Python/PyTorch, adversarial dataset design, evaluation harnesses, security engineering, and careful analysis of failures—including null results and scoring mistakes.
+
+**For AI benchmark work:** I can design adversarial tasks, curate and validate datasets, write deterministic graders and evaluation harnesses, and report uncertainty and failure modes clearly. My current benchmark tests indirect prompt injection in SOC telemetry (66 payloads, six attacker-controlled fields, three defense tiers); I found and corrected a scoring confound and publish the corrected results alongside the original artifacts. I’m interested in contributing to benchmark and model-evaluation projects such as Shipd’s Eris/Olympus.
+
+**Selected evidence:** paid vulnerability research across web, firmware/TrustZone, cloud and blockchain; merged security fixes in OWASP and NVIDIA garak; Python, Go, C/C++, Rust, PyTorch, Transformers, LLM evaluation and eBPF. Bengaluru, India · remote availability.
+
 The two results I'd show you first are the ones that killed my own hypothesis.
 
 My prompt-injection work looked like a clean win — 6.1% bypass for one defense tier, 7.6% for the other — until I computed the interval and found the two don't separate at all. My GPT-2 probe looked like it decoded instruction provenance until I found the length confound I'd built into my own design; that one ended in a null. Both are published here with the numbers that make them look worse.
