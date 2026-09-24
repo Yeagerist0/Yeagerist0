@@ -8,6 +8,8 @@ I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, a
 
 ### Start here
 
+**[warrant](https://github.com/Yeagerist0/warrant)** — an autonomous web-pentest agent whose whole point is refusing to overclaim. It maps a target, plans typed probes, runs the read-only ones, and files only what it can prove. Point it at an app full of textbook IDOR and it finds every one and reports none: the evidence ledger refuses a victim-scoped primitive until reachability is proven, which is the line between a real bug and "this endpoint answered". Scope-locked so it can't leave the engagement, standard library only, 59 tests. The parts that say *no* — the scope gate, the ledger — are built and tested before anything acts on its own.
+
 **[sentinelx](https://github.com/Yeagerist0/sentinelx)** — self-hosted EDR plus a lightweight SIEM, in Go, C and eBPF. Endpoint telemetry gets correlated into a per-host provenance graph, so an investigation is a subgraph you can walk instead of a pile of alerts to sort. No LLM anywhere in the detection path, on purpose.
 
 **[theknight](https://github.com/Yeagerist0/theknight)** — AWS misconfiguration scanner that opens the fix as a pull request. Every scanner will tell you the bucket is public. This one sends the Terraform diff that closes it.
