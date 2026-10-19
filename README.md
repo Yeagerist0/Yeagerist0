@@ -1,15 +1,23 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Yeagerist0/Yeagerist0/main/assets/profile-banner.svg" alt="Hitarth Jain — security engineering and AI evaluation" width="100%">
+<img src="https://raw.githubusercontent.com/Yeagerist0/Yeagerist0/main/assets/profile-hero-v2.png" alt="Neon security console and event graph" width="100%">
 
-<br>
+<h1>HITARTH JAIN</h1>
+
+<p><strong>SECURITY ENGINEERING&nbsp; × &nbsp;AI EVALUATION</strong><br>
+I build tools that prove their findings — and experiments that show their limits.</p>
+
+<p>
+<img src="https://img.shields.io/badge/GO-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/badge/eBPF-7C3AED?style=for-the-badge" alt="eBPF">
+<img src="https://img.shields.io/badge/AI_EVAL-FF4D8D?style=for-the-badge" alt="AI evaluation">
+<img src="https://img.shields.io/badge/SECURITY-06B6D4?style=for-the-badge" alt="Security">
+</p>
 
 <a href="https://yeagerist0.github.io"><img src="https://img.shields.io/badge/PORTFOLIO-8B5CF6?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Portfolio"></a>
 <a href="https://www.linkedin.com/in/hitarthjain-security"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.kaggle.com/hitarthjain0"><img src="https://img.shields.io/badge/KAGGLE-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle"></a>
 <a href="mailto:jainhitarth963@gmail.com"><img src="https://img.shields.io/badge/EMAIL-FF4D8D?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-
-### 🛡️ I build security tools that prove their findings — and AI evaluations that show their limits.
 
 📍 Bengaluru, India &nbsp;·&nbsp; 🎓 CS undergrad, class of 2027 &nbsp;·&nbsp; 🐛 HackerOne + Intigriti
 
@@ -17,7 +25,7 @@
 
 <br>
 
-## ⚡ Featured missions
+<h2 align="center">⚡ &nbsp; SELECTED BUILDS &nbsp; ⚡</h2>
 
 <table>
   <tr>
@@ -52,7 +60,7 @@
   </tr>
 </table>
 
-## 🧪 Research lab
+<h2 align="center">🧪 &nbsp; RESEARCH LAB &nbsp; 🧪</h2>
 
 | Project | The question |
 |:--|:--|
@@ -61,7 +69,7 @@
 
 > 🔬 I publish the awkward result too. If the numbers don't support the hypothesis, that's the result.
 
-## 🌐 Open-source security
+<h2 align="center">🌐 &nbsp; OPEN-SOURCE SECURITY &nbsp; 🌐</h2>
 
 <a href="https://github.com/tensorflow/tensorflow/pull/128181"><img src="https://img.shields.io/badge/TensorFlow-merged-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="Merged TensorFlow PR"></a>
 <a href="https://github.com/coreruleset/coreruleset/pull/4774"><img src="https://img.shields.io/badge/OWASP_CRS-merged-5E9CA0?style=flat-square" alt="Merged OWASP CRS PR"></a>
@@ -71,7 +79,7 @@
 
 **A few fixes:** TensorFlow name validation · SSTI coverage for Velocity and FreeMarker · a silently empty garak detector · two published security advisories.
 
-## 🧰 Toolbox
+<h2 align="center">🧰 &nbsp; TOOLBOX &nbsp; 🧰</h2>
 
 <p>
 <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
@@ -84,7 +92,7 @@
 
 **Also:** C/C++ · Rust · Java · TypeScript · Transformers · adversarial testing · reproducible benchmarks
 
-## 🎲 Side quests
+<h2 align="center">🎲 &nbsp; SIDE QUESTS &nbsp; 🎲</h2>
 
 [Corrective RAG](https://github.com/Yeagerist0/RAG) · [JobBoard](https://github.com/Yeagerist0/JobBoard) · [Spring Boot expense tracker](https://github.com/Yeagerist0/SpringBootFinalProject) · [Ride-sharing backend](https://github.com/Yeagerist0/rideshare) · [Movie ticket booking](https://github.com/Yeagerist0/movieticketlld)
 
