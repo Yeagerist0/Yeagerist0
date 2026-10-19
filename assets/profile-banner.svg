@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Hitarth Jain — security engineering and AI evaluation</title>
+  <desc id="desc">Neon terminal inspired banner with a security scan motif and a terminal panel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080d1b"/>
+      <stop offset="0.55" stop-color="#11152c"/>
+      <stop offset="1" stop-color="#21102d"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36e4d6"/>
+      <stop offset="0.52" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ff4da6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35e7d2" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#ff4da6" stop-opacity=".02"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#a7b2ff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="360" rx="28" fill="url(#grid)"/>
+  <ellipse cx="265" cy="58" rx="340" ry="190" fill="#13cfc0" opacity=".08"/>
+  <ellipse cx="1150" cy="330" rx="360" ry="230" fill="#e52d91" opacity=".1"/>
+  <rect x="1.5" y="1.5" width="1277" height="357" rx="27" fill="none" stroke="url(#edge)" stroke-opacity=".72" stroke-width="3"/>
+
+  <g font-family="DejaVu Sans Mono, SFMono-Regular, Menlo, Consolas, monospace">
+    <rect x="76" y="71" width="9" height="9" rx="4.5" fill="#42ead5" filter="url(#softGlow)"/>
+    <text x="101" y="81" fill="#80f4e4" font-size="13" letter-spacing="1.5">INDEPENDENT BUILDER  /  BENGALURU, IN</text>
+    <text x="76" y="162" fill="#f5f6ff" font-family="DejaVu Sans, Arial, sans-serif" font-size="54" font-weight="700">HITARTH JAIN</text>
+    <text x="76" y="207" fill="#d7d8ef" font-size="18" letter-spacing="1">SECURITY ENGINEERING  /  AI EVALUATION</text>
+    <text x="76" y="259" fill="#9ca5c7" font-family="DejaVu Sans, Arial, sans-serif" font-size="17">Tools that prove their findings. Experiments that show their limits.</text>
+    <g transform="translate(76 294)">
+      <rect width="91" height="30" rx="15" fill="url(#glow)" stroke="#39dcca" stroke-opacity=".55"/>
+      <text x="45.5" y="20" text-anchor="middle" fill="#a4fff3" font-size="12" letter-spacing="1.4">GO</text>
+      <rect x="103" width="103" height="30" rx="15" fill="url(#glow)" stroke="#8b75ff" stroke-opacity=".65"/>
+      <text x="154.5" y="20" text-anchor="middle" fill="#d0c5ff" font-size="12" letter-spacing="1.2">eBPF</text>
+      <rect x="218" width="112" height="30" rx="15" fill="url(#glow)" stroke="#ff5eae" stroke-opacity=".6"/>
+      <text x="274" y="20" text-anchor="middle" fill="#ffb4dc" font-size="12" letter-spacing="1.1">AI EVAL</text>
+    </g>
+  </g>
+
+  <g transform="translate(766 73)">
+    <rect x="0" y="0" width="442" height="216" rx="15" fill="#080b16" fill-opacity=".86" stroke="#6a65a8" stroke-opacity=".65"/>
+    <path d="M0 43h442" stroke="#424463" stroke-opacity=".8"/>
+    <circle cx="23" cy="22" r="5" fill="#ff647c"/>
+    <circle cx="42" cy="22" r="5" fill="#ffc857"/>
+    <circle cx="61" cy="22" r="5" fill="#36d9b4"/>
+    <text x="221" y="27" text-anchor="middle" fill="#878ba9" font-family="ui-monospace, monospace" font-size="12">evidence.sh</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
+      <text x="25" y="79" fill="#77809d">01</text><text x="60" y="79" fill="#72e6d3">$ scan --scope authorized</text>
+      <text x="25" y="111" fill="#77809d">02</text><text x="60" y="111" fill="#aeb6d5">target verified</text><text x="191" y="111" fill="#57e0ba">✓</text>
+      <text x="25" y="143" fill="#77809d">03</text><text x="60" y="143" fill="#aeb6d5">evidence collected</text><text x="224" y="143" fill="#57e0ba">✓</text>
+      <text x="25" y="175" fill="#77809d">04</text><text x="60" y="175" fill="#f58bc3">claim strength = evidence</text>
+    </g>
+    <rect x="60" y="190" width="9" height="18" rx="2" fill="#3ee6d2" opacity=".9"/>
+    <path d="M78 199h184" stroke="url(#edge)" stroke-width="2" opacity=".8"/>
+  </g>
+
+  <g fill="none" stroke="url(#edge)" stroke-width="2" opacity=".65">
+    <path d="M696 105h36v44h22"/><circle cx="754" cy="149" r="4" fill="#40e4d1" stroke="none"/>
+    <path d="M690 266h48v-38h28"/><circle cx="766" cy="228" r="4" fill="#ff5eae" stroke="none"/>
+  </g>
+</svg>
