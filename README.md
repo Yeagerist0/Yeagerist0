@@ -1,72 +1,75 @@
-## Hitarth Jain
+<div align="center">
 
-**AI evaluation & security researcher · benchmark designer · open-source security contributor**
+# Hitarth Jain
 
-I build reproducible evaluations for AI systems and investigate where models mistake untrusted data for instructions. My work combines Python/PyTorch, adversarial dataset design, evaluation harnesses, security engineering, and careful analysis of failures—including null results and scoring mistakes.
+### Security engineering · AI evaluation · backend systems
 
-**For AI benchmark work:** I can design adversarial tasks, curate and validate datasets, write deterministic graders and evaluation harnesses, and report uncertainty and failure modes clearly. My current benchmark tests indirect prompt injection in SOC telemetry (66 payloads, six attacker-controlled fields, three defense tiers); I found and corrected a scoring confound and publish the corrected results alongside the original artifacts. I’m interested in contributing to benchmark and model-evaluation projects such as Shipd’s Eris/Olympus.
+**I build tools that stay honest about what they can prove.**
 
-**Selected evidence:** paid vulnerability research across web, firmware/TrustZone, cloud and blockchain; merged security fixes in OWASP and NVIDIA garak; Python, Go, C/C++, Rust, PyTorch, Transformers, LLM evaluation and eBPF. Bengaluru, India · remote availability.
+Bengaluru, India · CS undergraduate, graduating 2027
 
-The two results I'd show you first are the ones that killed my own hypothesis.
+[Website](https://yeagerist0.github.io) · [LinkedIn](https://www.linkedin.com/in/hitarthjain-security) · [Kaggle](https://www.kaggle.com/hitarthjain0) · [Email](mailto:jainhitarth963@gmail.com)
 
-My prompt-injection work looked like a clean win — 6.1% bypass for one defense tier, 7.6% for the other — until I computed the interval and found the two don't separate at all. My GPT-2 probe looked like it decoded instruction provenance until I found the length confound I'd built into my own design; that one ended in a null. Both are published here with the numbers that make them look worse.
+</div>
 
-I build security tooling in Go and eBPF, hunt bugs on HackerOne and Intigriti, and report what the measurement actually says. CS undergrad at Scaler School of Technology in Bengaluru, degree from BITS Pilani, graduating 2027.
+I work on security tooling and AI evaluation, with a focus on evidence: what a scanner can demonstrate, what a model can safely infer, and what an experiment can actually support. I also do vulnerability research through HackerOne and Intigriti.
 
-### Start here
+## Featured work
 
-**[warrant](https://github.com/Yeagerist0/warrant)** — an autonomous web-pentest agent whose whole point is refusing to overclaim. It maps a target, plans typed probes, runs the read-only ones, and files only what it can prove. Point it at an app full of textbook IDOR and it finds every one and reports none: the evidence ledger refuses a victim-scoped primitive until reachability is proven, which is the line between a real bug and "this endpoint answered". Scope-locked so it can't leave the engagement, standard library only, 67 tests. An LLM can now re-rank the planner's fixed, typed action list — it can reorder what the rules proposed, never invent a new one — and on the one fixture measured so far it tied the hand-written priorities exactly rather than beating them; written up as a tie, not a win.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/Yeagerist0/warrant">Warrant</a></strong><br>
+      An authorization-scoped web pentest agent. It plans typed probes and reports a finding only when its evidence shows the impact. Go.
+    </td>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/Yeagerist0/sentinelx">SentinelX</a></strong><br>
+      Self-hosted EDR and lightweight SIEM. Go, C and eBPF telemetry becomes investigations through a per-host provenance graph.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/Yeagerist0/theknight">TheKnight</a></strong><br>
+      AWS misconfiguration scanner that can turn a finding into a reviewed Terraform pull request.
+    </td>
+    <td width="50%" valign="top">
+      <strong><a href="https://github.com/Yeagerist0/CyberML">CyberML</a></strong><br>
+      Forecasts near-term attack risk from exposure, honeypot telemetry, CVEs and exploit signals.
+    </td>
+  </tr>
+</table>
 
-**[sentinelx](https://github.com/Yeagerist0/sentinelx)** — self-hosted EDR plus a lightweight SIEM, in Go, C and eBPF. A real Linux agent traces process, network and file activity, correlated into a per-host provenance graph, so an investigation is a subgraph you can walk instead of a pile of alerts. Five cross-event patterns mapped to MITRE ATT&CK catch shapes single-event rules can't — like an image another process wrote getting executed and then beaconing out. Process identity is read in-kernel via CO-RE, so it survives processes that exit in microseconds. No LLM anywhere in the detection path, on purpose.
+## Research
 
-**[theknight](https://github.com/Yeagerist0/theknight)** — AWS misconfiguration scanner that opens the fix as a pull request. Every scanner will tell you the bucket is public. This one sends the Terraform diff that closes it.
+- **[Prompt injection in SOC telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — a 66-payload corpus and evaluation harness for testing how narrator defenses handle hostile endpoint data. The write-up includes a scoring confound I found and corrected, plus results that did not support my initial hypothesis.
+- **[Instruction provenance probe](https://github.com/Yeagerist0/instruction-provenance-probe)** — tests whether GPT-2 representations distinguish operator instructions from retrieved text. A length confound led to a null result, which is documented with the experiment.
 
-**[prompt-injection-soc-telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry)** — the corpus and harness behind the result above. 66 payloads, three narrator defense tiers, an LLM judge I had to rebuild mid-run after finding a confound in it. Where the tiers do separate is severity: the structurally grounded one never downgraded a severity in its own voice, 0 out of 31, and that held on a second model when the prompt-hardened tier's advantage didn't.
+## Open source
 
-**[instruction-provenance-probe](https://github.com/Yeagerist0/instruction-provenance-probe)** — the mechanistic version of the same question. Is "this instruction came from the operator" versus "this one came from retrieved data" linearly decodable from GPT-2's residual stream? Linear probes and activation steering in PyTorch, and a null result I wrote up anyway.
+Selected merged security contributions:
 
-### Also here
+- [TensorFlow #128181](https://github.com/tensorflow/tensorflow/pull/128181) — fixed eager-mode validation for `tf.name_scope` while preserving names used by existing callers.
+- [OWASP CRS #4774](https://github.com/coreruleset/coreruleset/pull/4774) — added SSTI detection coverage for Velocity and FreeMarker directive syntax.
+- [OWASP WSTG #1506](https://github.com/OWASP/wstg/pull/1506) — added practical SSTI probes and guidance for template engines that evaluate directives.
+- [NVIDIA garak #2146](https://github.com/NVIDIA/garak/pull/2146) — fixed a wordlist key that left a shipped detector empty and added a regression check.
+- [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published) — reported two published security advisories; fixes shipped in v0.3.3.
 
-- **[CyberML](https://github.com/Yeagerist0/CyberML)** — forecasts next-week attack risk for public-facing services from honeypot telemetry, Shodan exposure, CVE feeds and PoC-exploit tracking.
-- **[JobBoard](https://github.com/Yeagerist0/JobBoard)** — React, TypeScript and Supabase, with separate employer and candidate flows. [Live](https://job-board-alpha-fawn.vercel.app).
-- **[RAG](https://github.com/Yeagerist0/RAG)** — corrective-RAG document Q&A. When the grader says the retrieved chunks don't answer the question, it re-retrieves rather than guessing.
-- **[SpringBootFinalProject](https://github.com/Yeagerist0/SpringBootFinalProject)** and **[rideshare](https://github.com/Yeagerist0/rideshare)** — Spring Boot backends with JWT auth, role-based access and Docker Compose.
-- Java low-level design: [movieticketlld](https://github.com/Yeagerist0/movieticketlld) (concurrency-safe seat locking, with the race-condition tests), [elevatorlld](https://github.com/Yeagerist0/elevatorlld), [parkinglotlld](https://github.com/Yeagerist0/parkinglotlld).
+## Other projects
 
-### Kaggle
+[Corrective RAG](https://github.com/Yeagerist0/RAG) · [JobBoard](https://github.com/Yeagerist0/JobBoard) · [Spring Boot expense tracker](https://github.com/Yeagerist0/SpringBootFinalProject) · [Ride-sharing backend](https://github.com/Yeagerist0/rideshare) · [Movie ticket booking](https://github.com/Yeagerist0/movieticketlld)
 
-**Notebooks Expert**, rank 1,277 of 60,004 in Code. Notebooks where I measure instead of guess: repeated cross-validation, error bars, and the ideas that did nothing stay in. ([Profile](https://www.kaggle.com/hitarthjain0))
+## Kaggle
 
-- **[RSNA Knee: CoAtNet + ConvNeXt MIL, LB 0.950](https://www.kaggle.com/code/hitarthjain0/rsna-knee-coatnet-convnext-mil-lb-0-950)** — my most-voted notebook (54). A forkable knee-MRI pipeline that scores 0.950 AUC. Blending in my own 2.5D models pulled it down to 0.948, so they stay out.
-- **[RSNA Knee: which report labels to train on](https://www.kaggle.com/code/hitarthjain0/rsna-which-report-labels-to-train-on)** — scores five LLM-made label sets against the 58 hand-labelled studies. Soft labels beat hard 0/1 ones, 0.895 to 0.835 AUC.
-- **[RSNA Knee: rebuild barun's volumes from DICOM](https://www.kaggle.com/code/hitarthjain0/rsna-rebuild-barun-volumes-from-dicom)** — reproduces a popular preprocessed dataset from raw DICOM so models trained on it can be submitted offline; 32 of 40 series come out byte-identical.
-- **[How much does the public leaderboard lie?](https://www.kaggle.com/code/hitarthjain0/how-much-does-the-public-leaderboard-lie)** — public vs private ranks for 512 competitions from Meta Kaggle. Only about half of the public top 1% is still top 1% at the end; in 1,000+ team competitions a public top-1% rank ends with a medal about 79% of the time, 5-7.5% about 56%, 10-12.5% about 23%. Runs in 28 s on a [17 MB rank extract](https://www.kaggle.com/datasets/hitarthjain0/kaggle-public-vs-private-ranks).
-- **[Gemma 4 agent: run the real evaluator locally](https://www.kaggle.com/code/hitarthjain0/gemma-4-agent-run-the-real-evaluator-locally)** — runs the competition's own evaluator on a GPU notebook and counts tool-call loops from the traces (3 of 10 tasks looped; 1 of 10 resolved in this run).
-- **[Titanic: what beats the noise](https://www.kaggle.com/code/hitarthjain0/titanic-feature-engineering-what-beats-the-noise)** — 20 repeated CVs per feature idea. Only the title and an age fill by title beat the noise (+0.5 and +0.4 points); the public leaderboard's own error is about ±2 points.
-- **[Spaceship Titanic: feature ablation](https://www.kaggle.com/code/hitarthjain0/spaceship-titanic-feature-engineering-ablation)** — group-aware CV. Parsing the cabin is worth about 1.4 points; almost everything else is noise.
-- **[Store Sales: how wrong is random CV](https://www.kaggle.com/code/hitarthjain0/store-sales-how-wrong-is-random-cv)** — the same LightGBM with calendar features scores 0.42 RMSLE under random folds and about 0.55 on a real 16-day forecast.
-- **[RSNA Knee: 58 labels, 4,407 reports](https://www.kaggle.com/code/hitarthjain0/rsna-knee-58-labels-4407-reports)** — only 1.3% of training studies have gold labels. Keyword rules agree with them about 72% of the time, and a text model is close to chance.
-- **[Gemma 4 developer agent: field guide](https://www.kaggle.com/code/hitarthjain0/gemma-4-dev-agent-what-moves-the-leaderboard)** — how the two-phase evaluation, budgets and bundle validation work, with a runnable bundle builder.
+I like experiments that report uncertainty and keep the failed ideas visible. Selected notebooks: [RSNA knee MRI](https://www.kaggle.com/code/hitarthjain0/rsna-knee-coatnet-convnext-mil-lb-0-950) · [Public vs. private leaderboard ranks](https://www.kaggle.com/code/hitarthjain0/how-much-does-the-public-leaderboard-lie) · [Store Sales: random CV vs. a real forecast](https://www.kaggle.com/code/hitarthjain0/store-sales-how-wrong-is-random-cv)
 
-### Open source
+## Tools I use
 
-Eight merged across five projects, the rest open — links so you can check the state yourself.
+**Languages:** Go, Python, C/C++, Rust, Java, TypeScript<br>
+**Security & systems:** eBPF, AWS, Linux, web application security<br>
+**ML & evaluation:** PyTorch, Transformers, adversarial testing, reproducible benchmarks
 
-- **[tensorflow #128181](https://github.com/tensorflow/tensorflow/pull/128181)** — *merged.* `tf.name_scope('my scope')` validated nothing in eager mode and raised `ValueError` on the same string inside `@tf.function`, so code that ran interactively broke once it was traced. Open as [#38754](https://github.com/tensorflow/tensorflow/issues/38754) since April 2020. The obvious fix — reuse graph mode's pattern — is wrong: graph mode applies its op-name rule to root scopes, which forbids the leading underscores and `:0` suffixes TensorFlow's own TPU embedding code puts in scope names, `_sparse_core_table_layouts` among them. The merged version gives eager scopes their own pattern: still rejects spaces and `@`, still accepts every name callers already depend on. Twelve rounds of requested changes, most of them later retracted by the reviewer.
+<div align="center">
 
-- **[coreruleset #4774](https://github.com/coreruleset/coreruleset/pull/4774)** — *merged.* Rule 934200 covered `{{...}}`, `#{...}` and `<%...%>` but had no alternative for Velocity or FreeMarker directive syntax, so working RCE chains in both engines reached paranoia level 1, the default, with no rule matched. The Java rules fall one at a time to splitting a string literal: the class-name list to `'java.lang.Runt'+'ime'`, the `runtime|processbuilder` regex to `'getRunt'+'ime'`, the PHP function regex to `'ex'+'ec'`. Reported as [#4773](https://github.com/coreruleset/coreruleset/issues/4773) with both payloads executing under Velocity 2.3 and FreeMarker 2.3.32, fixed with two assembly blocks and 11 regression tests. Full go-ftw matrix green, 5116/5116 on both engines.
-- **[wstg #1506](https://github.com/OWASP/wstg/pull/1506)** — *merged.* The Web Security Testing Guide's SSTI section probes only interpolation syntax (`{{ }}`, `${ }`, `<% %>`), so a tester following it misses Velocity and FreeMarker, which evaluate directive syntax. Adds probes for both, verified to render `49` under Velocity 2.3 and FreeMarker 2.3.32, and warns that a bare directive returns no output — an unchanged response is not evidence the payload did not run. Also replaces Tplmap, whose last commit was 2021, with the maintained fork.
-- **[garak #2146](https://github.com/NVIDIA/garak/pull/2146)** — *merged.* NVIDIA's LLM red-teaming framework, 9k★. `SurgeProfanityRacialEthnic` requested a CSV category key that doesn't exist; `surge_list` is a `defaultdict`, so the typo never raised — it silently built the detector with zero substrings. garak's racial/ethnic slur detector had been matching nothing at all. Fixed the key and added a test asserting every wordlist-backed detector actually receives terms, so the same silent-empty failure can't recur under a different typo. Reported as [#2145](https://github.com/NVIDIA/garak/issues/2145).
-- **[garak #2144](https://github.com/NVIDIA/garak/pull/2144)** — *open, pending maintainer review.* `StringDetector`'s word-boundary regex (`\b`) can't match a term that itself starts or ends with a non-word character, so 14 shipped profanity-list entries — the leetspeak/symbol obfuscations the list exists to catch — silently scored clean; fixed with lookaround boundaries. Regression test proven to fail on the unpatched code; full detector suite green, 780 passed.
-- **[CheatSheetSeries #2393](https://github.com/OWASP/CheatSheetSeries/issues/2393)** — *closed, superseded.* The LLM Prompt Injection cheat sheet graded defenses with a block rate over 14 payloads and called it a "Security score", with no benign corpus and a pass condition that substring-matches refusal wording. I proposed replacing it with something that has controls and reports an interval; [#2413](https://github.com/OWASP/CheatSheetSeries/pull/2413) from another contributor merged the smoke-test-versus-benchmark distinction first, and this issue closed with it.
-- **[agent-memory-guard](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published)** — *two published security advisories, credited as finder; fixed in v0.3.3 by four merged PRs (#135, #136, #138, #139).* An OWASP Incubator project. [GHSA-fw7x-cwvp-w568](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories/GHSA-fw7x-cwvp-w568) (**High**, CVSS 8.2): a value nested a few hundred levels deep made `_stringify` raise `RecursionError`, `_run_detectors` swallowed it, and the write went through with no detector run and no event, even under `Policy.strict()` — about 1 KB of ordinary JSON was enough to store a prompt-injection string or a secret untouched. [GHSA-mr6c-q273-8v8h](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories/GHSA-mr6c-q273-8v8h) (**Moderate**, 4.9): `immutable_keys` globs blocked deletes but were compared literally when building integrity baselines, so `verify_all()` missed tampering with a key like `identity.role`. Also now emits a `SecurityEvent` when a detector raises, and documents that `Snapshot.digest` is never verified.
-- A security-boundary gap in **OWASP ZAP**'s `llm` add-on, reported privately per their disclosure policy with a proof-of-concept and a proposed fix; awaiting response.
+*Build carefully. Measure honestly. Show the evidence.*
 
-### Bug bounty
-
-HackerOne and Intigriti. The findings that get paid are almost always the same shape: an unauthenticated path into a function that assumed nobody could reach it from outside.
-
-### Contact
-
-[Site](https://yeagerist0.github.io) · [LinkedIn](https://www.linkedin.com/in/hitarthjain-security) · jainhitarth963@gmail.com
+</div>
