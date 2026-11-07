@@ -65,24 +65,24 @@ I build tools that prove their findings — and experiments that show their limi
 | Project | The question |
 |:--|:--|
 | [Prompt injection in SOC telemetry](https://github.com/Yeagerist0/prompt-injection-soc-telemetry) | Can an AI narrator handle hostile endpoint data? 66 payloads, three defenses, and a scoring confound I caught and corrected. |
-| [Instruction provenance probe](https://github.com/Yeagerist0/instruction-provenance-probe) | Can GPT-2 tell operator instructions from retrieved text? A length confound led to a documented null result. |
+| [Instruction provenance probe](https://github.com/Yeagerist0/instruction-provenance-probe) | Can GPT-2 tell operator instructions from retrieved text? The length confound is documented; the corrected holdout experiment still needs a rerun. |
 
 > 🔬 I publish the awkward result too. If the numbers don't support the hypothesis, that's the result.
 
 <h2 align="center">🌐 &nbsp; OPEN-SOURCE SECURITY &nbsp; 🌐</h2>
 
-<a href="https://github.com/Yeagerist0?tab=achievements"><img src="https://github.githubassets.com/assets/pull-shark-bronze-a37accb528d1.png" alt="GitHub Pull Shark achievement, Bronze tier" width="48"></a>
-<a href="https://github.com/Yeagerist0?tab=achievements"><img src="https://img.shields.io/badge/Pull_Shark-Bronze_%C3%972-6e5494?style=flat-square&logo=github" alt="Pull Shark Bronze, level 2"></a>
+<a href="https://github.com/Yeagerist0?tab=achievements"><img src="https://img.shields.io/badge/GitHub-Pull_Shark-6e5494?style=flat-square&logo=github" alt="GitHub Pull Shark achievement"></a>
 <a href="https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published"><img src="https://img.shields.io/badge/OWASP_Agent_Memory_Guard-2_published_advisories-5E9CA0?style=flat-square" alt="Two published OWASP advisories"></a>
 
-**21 merged pull requests** across security tooling, AI safety, infrastructure and developer tools. Each link goes to the merged change.
+**31 merged pull requests as of 7 Nov 2026** across security tooling, AI safety, infrastructure and developer tools. Each link goes to the merged change.
 
 <details>
 <summary>View all merged pull requests</summary>
 
 | Project | Merged work |
 |:--|:--|
-| [Metasploit](https://github.com/rapid7/metasploit-framework) | [Fix Varnish login crash](https://github.com/rapid7/metasploit-framework/pull/22061) · [Remove duplicate Telnet target](https://github.com/rapid7/metasploit-framework/pull/22060) · [Remove duplicate Redis target](https://github.com/rapid7/metasploit-framework/pull/22058) · [Clean up TCP login scanner output](https://github.com/rapid7/metasploit-framework/pull/22052) |
+| [Metasploit modules](https://github.com/rapid7/metasploit-framework) | [Fix Varnish login crash](https://github.com/rapid7/metasploit-framework/pull/22061) · [Fix xorcom diagnostics crash](https://github.com/rapid7/metasploit-framework/pull/22079) · [Remove duplicate VNC target](https://github.com/rapid7/metasploit-framework/pull/22075) · [Remove duplicate RSH/Rlogin target](https://github.com/rapid7/metasploit-framework/pull/22076) · [Remove duplicate Telnet target](https://github.com/rapid7/metasploit-framework/pull/22060) · [Remove duplicate Redis target](https://github.com/rapid7/metasploit-framework/pull/22058) · [Clean up TCP login scanner output](https://github.com/rapid7/metasploit-framework/pull/22052) |
+| [Metasploit tooling](https://github.com/rapid7/metasploit-framework) | [Run Python 3.8 acceptance on Ubuntu 24.04](https://github.com/rapid7/metasploit-framework/pull/22097) · [Fix support-matrix JSON output](https://github.com/rapid7/metasploit-framework/pull/22095) · [Support linked worktrees in PR fetch](https://github.com/rapid7/metasploit-framework/pull/22096) · [Surface git-diff failures in msftidy](https://github.com/rapid7/metasploit-framework/pull/22059) |
 | [ProjectDiscovery httpx](https://github.com/projectdiscovery/httpx) | [Ignore alternate links as favicons](https://github.com/projectdiscovery/httpx/pull/2680) · [Avoid retrying absolute favicon URLs as target paths](https://github.com/projectdiscovery/httpx/pull/2681) |
 | [SentinelX](https://github.com/Yeagerist0/sentinelx) | [Stabilize Postgres durability CI](https://github.com/Yeagerist0/sentinelx/pull/1) · [Use the Makefile vet target in CI](https://github.com/Yeagerist0/sentinelx/pull/2) · [Reject oversized ingest requests](https://github.com/Yeagerist0/sentinelx/pull/3) |
 | [TheKnight](https://github.com/Yeagerist0/theknight) | [Use the Makefile lint target in CI](https://github.com/Yeagerist0/theknight/pull/1) · [Paginate S3 bucket discovery](https://github.com/Yeagerist0/theknight/pull/2) |
@@ -90,7 +90,9 @@ I build tools that prove their findings — and experiments that show their limi
 | [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | [Bound recursive string conversion](https://github.com/OWASP/www-project-agent-memory-guard/pull/135) · [Match immutable keys as globs](https://github.com/OWASP/www-project-agent-memory-guard/pull/136) · [Emit security events for swallowed detector errors](https://github.com/OWASP/www-project-agent-memory-guard/pull/138) · [Document that snapshot digests are not verified](https://github.com/OWASP/www-project-agent-memory-guard/pull/139) |
 | [OWASP Web Security Testing Guide](https://github.com/OWASP/wstg) | [Add SSTI directive-syntax probes](https://github.com/OWASP/wstg/pull/1506) · [Fix Baidu link-check false positive](https://github.com/OWASP/wstg/pull/1509) |
 | [OWASP CRS](https://github.com/coreruleset/coreruleset) | [Detect Velocity and FreeMarker directive syntax](https://github.com/coreruleset/coreruleset/pull/4774) |
-| [NVIDIA garak](https://github.com/NVIDIA/garak) | [Load the correct category for `SurgeProfanityRacialEthnic`](https://github.com/NVIDIA/garak/pull/2146) |
+| [NVIDIA garak](https://github.com/NVIDIA/garak) | [Load the correct category for `SurgeProfanityRacialEthnic`](https://github.com/NVIDIA/garak/pull/2146) · [Honor `matchtype` overrides in two detectors](https://github.com/NVIDIA/garak/pull/2243) |
+| [PyGoat](https://github.com/adeyosemanputra/pygoat) | [Prevent zero scoring windows from crashing timed solves](https://github.com/adeyosemanputra/pygoat/pull/573) |
+| [JobBoard](https://github.com/Yeagerist0/JobBoard) | [Remove a bundled API key and sanitize job descriptions](https://github.com/Yeagerist0/JobBoard/pull/1) |
 | [WSTG community fork](https://github.com/kingthorin/wstg) | [Fix a typo, reference and list formatting](https://github.com/kingthorin/wstg/pull/8) |
 
 </details>
