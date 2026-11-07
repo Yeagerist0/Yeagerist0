@@ -74,7 +74,7 @@ I build tools that prove their findings — and experiments that show their limi
 <a href="https://github.com/Yeagerist0?tab=achievements"><img src="https://img.shields.io/badge/GitHub-Pull_Shark-6e5494?style=flat-square&logo=github" alt="GitHub Pull Shark achievement"></a>
 <a href="https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published"><img src="https://img.shields.io/badge/OWASP_Agent_Memory_Guard-2_published_advisories-5E9CA0?style=flat-square" alt="Two published OWASP advisories"></a>
 
-**31 merged pull requests as of 7 Nov 2026** across security tooling, AI safety, infrastructure and developer tools. Each link goes to the merged change.
+**31 selected merged pull requests** across security tooling, AI safety, infrastructure and developer tools. Each link goes to the merged change.
 
 <details>
 <summary>View all merged pull requests</summary>
