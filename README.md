@@ -1,10 +1,11 @@
 <div align="center">
-  <img src="assets/hitarth-security.gif" alt="Animated Hitarth Jain banner with a security design sketch: scope, eBPF telemetry, and evidence checks" width="100%">
+  <img src="assets/hero-dossier.png" alt="Hitarth Jain — security engineering and AI security research, over an investigative case-file scene" width="100%">
   <p><strong>I build tools that prove their findings, and experiments that show their limits.</strong></p>
+  <p>Bengaluru · CS '27 · Open to security engineering and AI security research internships</p>
   <p><a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
 </div>
 
-## 01 / Built and tested
+## Case file 01 / Built and tested
 
 <table>
   <tr>
@@ -33,7 +34,27 @@
   </tr>
 </table>
 
-## 02 / Patches that landed
+<details>
+<summary>What evidence-first means in Warrant</summary>
+
+The tool's reviewer can reject a finding when the claimed impact outruns the proof:
+
+```text
+$ warrant review examples/finding.reachability-gap.json
+Unauthenticated write on the pairing channel
+
+not reportable
+  blocked: primitive operates on a victim-scoped identifier, but no observed claim
+           shows where an attacker obtains that identifier from an internet position;
+           find the disclosure and make that the finding, or do not file
+  reduced: claimed high, but observed evidence supports medium
+```
+
+[Full example and design notes](https://github.com/Yeagerist0/warrant#why-it-works-this-way)
+
+</details>
+
+## Case file 02 / Patches that landed
 
 I submit small fixes with reproductions and regression tests. A few merged examples:
 
@@ -44,7 +65,7 @@ I submit small fixes with reproductions and regression tests. A few merged examp
 
 [Browse all merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AYeagerist0+is%3Amerged) · [OWASP security advisories](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published)
 
-## 03 / Research notes
+## Case file 03 / Research notes
 
 [Instruction provenance probe](https://github.com/Yeagerist0/instruction-provenance-probe) documents a length confound and a corrected null result. I leave failed hypotheses visible so the next experiment starts from what the evidence actually shows.
 
