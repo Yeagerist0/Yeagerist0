@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="assets/hitarth-film.gif" alt="A moving film-style title card for Hitarth Jain, with a light sweep and signal tracing an investigative case file" width="100%">
+  <img src="assets/hitarth-noir.gif" alt="Dark animated security thriller title card: Hitarth Jain, Security Engineering and AI Security Research" width="100%">
   <p><strong>I build tools that prove their findings, and experiments that show their limits.</strong></p>
   <p>Bengaluru · CS '27 · Open to security engineering and AI security research internships</p>
-  <p><a href="assets/hitarth-film.mp4">Play full-motion title sequence</a> · <a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
+  <p><a href="assets/hitarth-noir.mp4">Play full-motion title sequence</a> · <a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
 </div>
 
-## Case file 01 / Built and tested
+## 01 / Built and tested
 
 <table>
   <tr>
@@ -54,7 +54,7 @@ not reportable
 
 </details>
 
-## Case file 02 / Patches that landed
+## 02 / Patches that landed
 
 I submit small fixes with reproductions and regression tests. A few merged examples:
 
@@ -65,7 +65,7 @@ I submit small fixes with reproductions and regression tests. A few merged examp
 
 [Browse all merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AYeagerist0+is%3Amerged) · [OWASP security advisories](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published)
 
-## Case file 03 / Research notes
+## 03 / Research notes
 
 [Instruction provenance probe](https://github.com/Yeagerist0/instruction-provenance-probe) documents a length confound and a corrected null result. I leave failed hypotheses visible so the next experiment starts from what the evidence actually shows.
 
