@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/hitarth-noir.gif" alt="Dark animated security thriller title card: Hitarth Jain, Security Engineering and AI Security Research" width="100%">
+  <img src="assets/hitarth-noir-v2.gif" alt="Dark security thriller title sequence with surveillance cuts: Hitarth Jain, Security Engineering and AI Security Research" width="100%">
   <p><strong>I build tools that prove their findings, and experiments that show their limits.</strong></p>
   <p>Bengaluru · CS '27 · Open to security engineering and AI security research internships</p>
-  <p><a href="assets/hitarth-noir.mp4">Play full-motion title sequence</a> · <a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
+  <p><a href="assets/hitarth-noir-v2.mp4">Play full-motion title sequence</a> · <a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
 </div>
 
 ## 01 / Built and tested
