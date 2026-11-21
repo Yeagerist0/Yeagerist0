@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/security-console.png" alt="Hitarth Jain security console: appsec, endpoint telemetry, and AI security research" width="100%">
+  <img src="assets/hitarth-security.gif" alt="Animated Hitarth Jain banner with a security design sketch: scope, eBPF telemetry, and evidence checks" width="100%">
   <p><strong>I build tools that prove their findings, and experiments that show their limits.</strong></p>
   <p><a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
 </div>
