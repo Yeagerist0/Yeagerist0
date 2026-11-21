@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/hero-dossier.png" alt="Hitarth Jain — security engineering and AI security research, over an investigative case-file scene" width="100%">
+  <img src="assets/hitarth-film.gif" alt="A moving film-style title card for Hitarth Jain, with a light sweep and signal tracing an investigative case file" width="100%">
   <p><strong>I build tools that prove their findings, and experiments that show their limits.</strong></p>
   <p>Bengaluru · CS '27 · Open to security engineering and AI security research internships</p>
-  <p><a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
+  <p><a href="assets/hitarth-film.mp4">Play full-motion title sequence</a> · <a href="https://yeagerist0.github.io">Portfolio</a> · <a href="https://www.linkedin.com/in/hitarthjain-security/">LinkedIn</a> · <a href="mailto:jainhitarth963@gmail.com">Email</a></p>
 </div>
 
 ## Case file 01 / Built and tested
