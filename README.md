@@ -56,8 +56,10 @@ not reportable
 
 ## 02 / Patches that landed
 
-I submit small fixes with reproductions and regression tests. A few merged examples:
+I submit small fixes with reproductions and regression tests. Recent merged examples:
 
+- [Metasploit: accept string-key JSON-RPC responses](https://github.com/rapid7/metasploit-framework/pull/22142)
+- [Metasploit: deduplicate Windows application inventory](https://github.com/rapid7/metasploit-framework/pull/22160) and [update Recog to fix a Ruby regex warning](https://github.com/rapid7/metasploit-framework/pull/22167)
 - [Metasploit: fix ColdFusion fingerprint handling](https://github.com/rapid7/metasploit-framework/pull/22078) and [reject invalid binary-encoding bytes](https://github.com/rapid7/metasploit-framework/pull/22087)
 - [OWASP WSTG: add SSTI directive-syntax probes](https://github.com/OWASP/wstg/pull/1506)
 - [OWASP Agent Memory Guard: emit events for swallowed detector errors](https://github.com/OWASP/www-project-agent-memory-guard/pull/138)
