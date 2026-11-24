@@ -56,13 +56,17 @@ not reportable
 
 ## 02 / Patches that landed
 
-I submit small fixes with reproductions and regression tests. Recent merged examples:
+As of 25 November 2026, 39 of my PRs have merged, including 32 in repositories
+outside my own account. I submit small fixes with reproductions and regression
+tests. A few security-focused examples:
 
 - [Metasploit: accept string-key JSON-RPC responses](https://github.com/rapid7/metasploit-framework/pull/22142)
 - [Metasploit: deduplicate Windows application inventory](https://github.com/rapid7/metasploit-framework/pull/22160) and [update Recog to fix a Ruby regex warning](https://github.com/rapid7/metasploit-framework/pull/22167)
 - [Metasploit: fix ColdFusion fingerprint handling](https://github.com/rapid7/metasploit-framework/pull/22078) and [reject invalid binary-encoding bytes](https://github.com/rapid7/metasploit-framework/pull/22087)
 - [OWASP WSTG: add SSTI directive-syntax probes](https://github.com/OWASP/wstg/pull/1506)
+- [OWASP Core Rule Set: detect Velocity and FreeMarker directive syntax](https://github.com/coreruleset/coreruleset/pull/4774)
 - [OWASP Agent Memory Guard: emit events for swallowed detector errors](https://github.com/OWASP/www-project-agent-memory-guard/pull/138)
+- [NVIDIA garak: fix detector category loading](https://github.com/NVIDIA/garak/pull/2146)
 - [ProjectDiscovery httpx: avoid retrying absolute favicon URLs as target paths](https://github.com/projectdiscovery/httpx/pull/2681)
 
 [Browse all merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AYeagerist0+is%3Amerged) · [OWASP security advisories](https://github.com/OWASP/www-project-agent-memory-guard/security/advisories?state=published)
