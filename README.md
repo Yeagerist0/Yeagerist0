@@ -56,7 +56,7 @@ not reportable
 
 ## 02 / Patches that landed
 
-As of 25 November 2026, 39 of my PRs have merged, including 32 in repositories
+As of 25 November 2026, 40 of my PRs have merged, including 33 in repositories
 outside my own account. I submit small fixes with reproductions and regression
 tests. A few security-focused examples:
 
